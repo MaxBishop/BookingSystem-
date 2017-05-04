@@ -67,7 +67,7 @@ namespace NakedObjects.BookingSystem {
         public static IMenu[] MainMenus(IMenuFactory factory)
         {
             return new IMenu[] {
-                factory.NewMenu<ExampleService>(true, "Menu")
+                factory.NewMenu<BookingSystemService>(true, "Menu")
             };
         }
     }

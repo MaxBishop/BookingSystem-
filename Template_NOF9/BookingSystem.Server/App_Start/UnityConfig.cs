@@ -20,7 +20,7 @@ using NakedObjects.Unity;
 using Common.Logging;
 using NakedObjects.Facade.Interface;
 
-namespace NakedObjects.Template
+namespace NakedObjects.BookingSystem
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.

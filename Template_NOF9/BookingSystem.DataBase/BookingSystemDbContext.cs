@@ -1,8 +1,8 @@
 ﻿
 using System.Data.Entity;
-using Template.Model;
+using BookingSystem.Model;
 
-namespace ExampleDbContext.DataBase
+namespace BookingSystem.DataBase
 {
     public class BookingSystemDbContext : DbContext
     {
@@ -11,7 +11,7 @@ namespace ExampleDbContext.DataBase
             Database.SetInitializer(new BookingSystemDbinitializer());
         }
 
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Appointments> Appointments { get; set; }
     }
 
 }

@@ -1,0 +1,1 @@
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Server\obj\Debug\BookingSystem.Server.csprojResolveAssemblyReference.cache

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using Template.Model;
+using BookingSystem.Model;
 
-namespace ExampleDbContext.DataBase
+namespace BookingSystem.DataBase
 {
     public class BookingSystemDbinitializer : DropCreateDatabaseIfModelChanges<BookingSystemDbContext>
     {
@@ -18,8 +18,8 @@ namespace ExampleDbContext.DataBase
 
         private void AddNewStudent(string name)
         {
-            var st = new Student() { FullName = name };
-            Context.Students.Add(st);
+            var st = new Appointments() { FullName = name };
+            Context.Appointments.Add(st);
         }
     }
 }
