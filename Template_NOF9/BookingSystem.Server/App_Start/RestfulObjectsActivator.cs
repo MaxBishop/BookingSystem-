@@ -6,6 +6,7 @@
 // See the License for the specific language governing permissions and limitations under the License.
 
 using log4net.Config;
+using NakedObjects.BookingSystem;
 using NakedObjects.Template;
 using System.Web.Http;
 using System.Web.Routing;

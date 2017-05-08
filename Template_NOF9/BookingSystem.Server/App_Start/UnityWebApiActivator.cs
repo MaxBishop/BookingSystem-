@@ -13,6 +13,7 @@ using NakedObjects.Template;
 using NakedObjects.Architecture.Component;
 using WebActivatorEx;
 using System;
+using NakedObjects.BookingSystem;
 
 [assembly: PreApplicationStartMethod(typeof (UnityWebApiActivator), "Start")]
 [assembly: ApplicationShutdownMethod(typeof (UnityWebApiActivator), "Shutdown")]
