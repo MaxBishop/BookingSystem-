@@ -11,7 +11,7 @@ namespace BookingSystem.DataBase
             Database.SetInitializer(new BookingSystemDbinitializer());
         }
 
-        public DbSet<Appointments> Appointments { get; set; }
+        public DbSet<Pupil> Pupil { get; set; }
     }
 
 }

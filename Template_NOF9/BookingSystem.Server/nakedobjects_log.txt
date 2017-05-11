@@ -1,0 +1,17 @@
+ERROR 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext: One or more validation errors were detected during model generation:
+
+BookingSystem.DataBase.Pupil: : EntityType 'Pupil' has no key defined. Define the key for this EntityType.
+Pupil: EntityType: EntitySet 'Pupil' is based on type 'Pupil' that has no keys defined.
+
+ERROR 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext: One or more validation errors were detected during model generation:
+
+BookingSystem.DataBase.Pupil: : EntityType 'Pupil' has no key defined. Define the key for this EntityType.
+Pupil: EntityType: EntitySet 'Pupil' is based on type 'Pupil' that has no keys defined.
+
+ERROR 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext: One or more validation errors were detected during model generation:
+
+BookingSystem.DataBase.Pupil: : EntityType 'Pupil' has no key defined. Define the key for this EntityType.
+Pupil: EntityType: EntitySet 'Pupil' is based on type 'Pupil' that has no keys defined.
+
+ERROR 8 NakedObjects.Core.Util.InvokeUtils - Mapping and metadata information could not be found for EntityType 'BookingSystem.Model.Appointments'.
+ERROR 8 NakedObjects.Core.Util.InvokeUtils - Mapping and metadata information could not be found for EntityType 'BookingSystem.Model.Appointments'.

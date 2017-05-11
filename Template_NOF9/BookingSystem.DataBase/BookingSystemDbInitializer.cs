@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using System.Linq;
 using BookingSystem.Model;
+using System;
 
 namespace BookingSystem.DataBase
 {
@@ -11,15 +12,15 @@ namespace BookingSystem.DataBase
         protected override void Seed(BookingSystemDbContext context)
         {
             this.Context = context;
-            AddNewStudent("Alie Algol");
-            AddNewStudent("Forrest Fortran");
-            AddNewStudent("James Java");
+            AddNewStudent("Dave Geez", "MB@gmail.com", "Medium");
+            AddNewStudent("Forrest Fortran", "MB@gmail.com", "Medium");
+            AddNewStudent("James Java",  "MB@gmail.com", "Medium");
         }
 
-        private void AddNewStudent(string name)
+        private void AddNewStudent(string name, string Em, string ClothingSize)
         {
-            var st = new Appointments() { FullName = name };
-            Context.Appointments.Add(st);
+            var st = new Pupil() { FullName = name, email = Em, size = ClothingSize };
+            Context.Pupil.Add(st);
         }
     }
 }
