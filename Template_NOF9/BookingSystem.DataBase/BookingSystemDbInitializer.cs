@@ -19,7 +19,7 @@ namespace BookingSystem.DataBase
 
         private void AddNewStudent(string name, string Em, string ClothingSize)
         {
-            var st = new Pupil() { FullName = name, email = Em, size = ClothingSize };
+            var st = new Pupil() { FullName = name, Email = Em, size = ClothingSize };
             Context.Pupil.Add(st);
         }
     }

@@ -16,7 +16,7 @@ namespace BookingSystem.Model
         public virtual string FullName { get; set; }
 
         [RegEx(Validation = @"^[\-\w\.]+@[\-\w\.]+\.[A-Za-z]+$")] // THis validates the email to check its in the correct format- go to manual under "email"
-        public virtual string email { get; set; }
+        public virtual string Email { get; set; }
 
         public virtual string size { get; set; }
 

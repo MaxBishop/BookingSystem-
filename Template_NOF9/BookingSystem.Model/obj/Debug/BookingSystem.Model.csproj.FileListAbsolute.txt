@@ -7,3 +7,4 @@ C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\b
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\NakedObjects.Types.dll
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\obj\Debug\BookingSystem.Model.dll
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\obj\Debug\BookingSystem.Model.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\obj\Debug\BookingSystem.Model.csprojResolveAssemblyReference.cache

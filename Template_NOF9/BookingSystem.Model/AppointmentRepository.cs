@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Model
 {
-    class AppointmentRepository
+    public class AppointmentRepository
     {
         //This example service acts as both a 'repository' (with methods for
         //retrieving objects from the database) and as a 'factory' i.e. providing
@@ -31,11 +31,11 @@ namespace BookingSystem.Model
                 return Container.Instances<Appointment>();
             }
 
-          //  public IQueryable<Pupil> FindPupilByName(string name)
-          //  {
+           public IQueryable<Pupil> FindPupilByName(string name)
+            {
                 //Filters students to find a match
-                //return AllAppointments().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
-         //   }
+                return null; //AllAppointments().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
+            }
         }
 
     }
