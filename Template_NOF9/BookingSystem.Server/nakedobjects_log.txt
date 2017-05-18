@@ -1,2 +1,3 @@
-WARN 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
-WARN 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
+ERROR 5 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext: An exception occurred while initializing the database. See the InnerException for details.
+ERROR 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext: An exception occurred while initializing the database. See the InnerException for details.
+ERROR 6 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Failed to create Code First DbContext: An exception occurred while initializing the database. See the InnerException for details.

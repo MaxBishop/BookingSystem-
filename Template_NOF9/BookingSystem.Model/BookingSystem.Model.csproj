@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentRepository.cs" />
-    <Compile Include="Appointments.cs" />
+    <Compile Include="Appointment.cs" />
     <Compile Include="PupilRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pupil.cs" />
