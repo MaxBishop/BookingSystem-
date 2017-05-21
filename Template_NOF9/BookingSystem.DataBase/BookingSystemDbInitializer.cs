@@ -17,9 +17,9 @@ namespace BookingSystem.DataBase
             AddNewStudent("James Java",  "DM@gmail.com", "Extra Small");
 
             context.SaveChanges();
-            AddNewAppointment(new DateTime(2017,05,18), 1);
-            AddNewAppointment(new DateTime(2017, 05, 18), 2);
-            AddNewAppointment(new DateTime(2017, 05, 18), 3);
+            AddNewAppointment(new DateTime(2017,05,21), 1);
+            AddNewAppointment(new DateTime(2017, 05, 21), 2);
+            AddNewAppointment(new DateTime(2017, 05, 21), 3);
 
         }
 

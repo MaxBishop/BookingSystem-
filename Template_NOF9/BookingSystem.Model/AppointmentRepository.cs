@@ -36,6 +36,8 @@ namespace BookingSystem.Model
                 //Filters students to find a match
                 return null; //AllAppointments().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
             }
+
+        [Eagerly(EagerlyAttribute.Do.Rendering)]
         public IQueryable<Appointment> TodaysAppointments()
         {
             return AllAppointments().Where(C => C.DateofAppointment == (DateTime.Today));
