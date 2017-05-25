@@ -13,6 +13,8 @@ namespace BookingSystem.DataBase
 
         public DbSet<Pupil> Pupils { get; set; }
 
+        public DbSet<Parent> Parents { get; set; }
+
         public DbSet<Appointment> Appointments { get; set; }
     }
 

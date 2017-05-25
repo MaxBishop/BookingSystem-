@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="AppointmentRepository.cs" />
     <Compile Include="Appointment.cs" />
+    <Compile Include="Parent.cs" />
+    <Compile Include="ParentRepostiory.cs" />
     <Compile Include="PupilRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pupil.cs" />

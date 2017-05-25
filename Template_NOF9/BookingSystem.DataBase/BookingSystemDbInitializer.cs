@@ -12,27 +12,40 @@ namespace BookingSystem.DataBase
         protected override void Seed(BookingSystemDbContext context)
         {
             this.Context = context;
-            AddNewStudent("Dave Geez", "MB@gmail.com", "Medium");
-            AddNewStudent("Forrest Fortran", "HC@gmail.com", "Large");
-            AddNewStudent("James Java",  "DM@gmail.com", "Extra Small");
+            var DG = AddNewStudent("Dave Geez",  "Medium");
+            var FF = AddNewStudent("Forrest Fortran", "Large");
+            var JJ = AddNewStudent("James Java",   "Extra Small");
 
             context.SaveChanges();
-            AddNewAppointment(new DateTime(2017,05,21), 1);
-            AddNewAppointment(new DateTime(2017, 05, 21), 2);
-            AddNewAppointment(new DateTime(2017, 05, 21), 3);
+            var Ap1 = AddNewAppointment(new DateTime(2017,05,21), DG);
+            var Ap2 = AddNewAppointment(new DateTime(2017, 05, 21), FF);
+            var Ap3 = AddNewAppointment(new DateTime(2017, 05, 21), JJ);
+
+            context.SaveChanges();
+            var DB = AddNewParent("Dave Bishop", "davebishop@gmail.com");
+            var BH = AddNewParent("Boris Harding", "boris@hotmail.com");
+            var JW = AddNewParent("John Woods", "Jw@gmail.com");
 
         }
 
 
-        private void AddNewStudent(string name, string Em, string ClothingSize)
+        private Pupil AddNewStudent(string name,  string ClothingSize)
         {
-            var st = new Pupil() { FullName = name, Email = Em, size = ClothingSize };
-            Context.Pupils.Add(st);
+            var ppl = new Pupil() { FullName = name,  size = ClothingSize };
+            Context.Pupils.Add(ppl);
+            return (ppl);
         }
-        private void AddNewAppointment(DateTime Date, int pupilId)
+        private Appointment AddNewAppointment(DateTime Date, Pupil pupil)
         {
-            var st = new Appointment() {DateofAppointment = Date,  PupilId = pupilId};
-            Context.Appointments.Add(st);
+            var App = new Appointment() {DateofAppointment = Date,  Pupil = pupil};
+            Context.Appointments.Add(App);
+            return (App);
+        }
+        private Parent AddNewParent(string name, string email)
+        {
+            var Prnt = new Parent() { FullName = name, Email = email};
+            Context.Parents.Add(Prnt);
+            return (Prnt);
         }
     }
 }

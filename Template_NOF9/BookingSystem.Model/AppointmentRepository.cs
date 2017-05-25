@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Model
 {
-    public class AppointmentRepository
+    public class AppointmentRepository 
     {
         //This example service acts as both a 'repository' (with methods for
         //retrieving objects from the database) and as a 'factory' i.e. providing
@@ -42,9 +42,14 @@ namespace BookingSystem.Model
         {
             return AllAppointments().Where(C => C.DateofAppointment == (DateTime.Today));
         }
+        
         }
-
+   
     }
+
+
+
+
 
 
 

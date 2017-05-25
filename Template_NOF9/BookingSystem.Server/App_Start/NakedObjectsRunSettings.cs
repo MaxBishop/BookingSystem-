@@ -48,7 +48,8 @@ namespace NakedObjects.BookingSystem {
             {
                 return new Type[] {
                     typeof(PupilRepository),
-                    typeof(AppointmentRepository)
+                    typeof(AppointmentRepository),
+                    typeof(ParentRepostiory)
                 };
             }
         }
@@ -70,7 +71,8 @@ namespace NakedObjects.BookingSystem {
         {
             return new IMenu[] {
                 factory.NewMenu<PupilRepository>(true, "Pupil"),
-                factory.NewMenu<AppointmentRepository>(true, "Appointment")
+                factory.NewMenu<AppointmentRepository>(true, "Appointment"),
+                factory.NewMenu<ParentRepostiory>(true, "Parent")
 
             };
         }
