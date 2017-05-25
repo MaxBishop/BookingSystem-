@@ -251,6 +251,10 @@
       <Project>{b24f4158-9795-4e37-997c-0b25a6c4fc8a}</Project>
       <Name>Template.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TechnicalServices\TechnicalServices.csproj">
+      <Project>{699f02c0-e217-4548-864a-6b265722e74b}</Project>
+      <Name>TechnicalServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

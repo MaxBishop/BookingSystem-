@@ -12,6 +12,7 @@ using NakedObjects.Menu;
 using NakedObjects.Persistor.Entity.Configuration;
 using BookingSystem.Model;
 using BookingSystem.DataBase;
+using TechnicalServices;
 
 namespace NakedObjects.BookingSystem {
     public class NakedObjectsRunSettings
@@ -49,7 +50,8 @@ namespace NakedObjects.BookingSystem {
                 return new Type[] {
                     typeof(PupilRepository),
                     typeof(AppointmentRepository),
-                    typeof(ParentRepostiory)
+                    typeof(ParentRepostiory),
+                    typeof(SMTPMailServer)
                 };
             }
         }

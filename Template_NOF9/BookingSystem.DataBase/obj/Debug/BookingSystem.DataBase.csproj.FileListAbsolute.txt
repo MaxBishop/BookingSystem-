@@ -12,3 +12,5 @@ C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.DataBas
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.DataBase\obj\Debug\BookingSystem.DataBase.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.DataBase\obj\Debug\BookingSystem.DataBase.dll
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.DataBase\obj\Debug\BookingSystem.DataBase.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.DataBase\bin\Debug\TechnicalServices.dll
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.DataBase\bin\Debug\TechnicalServices.pdb
