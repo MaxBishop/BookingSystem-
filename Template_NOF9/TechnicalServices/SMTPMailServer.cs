@@ -27,9 +27,9 @@ namespace TechnicalServices
                 message.From = new MailAddress(SMTP_USER);
                 message.To.Add(new MailAddress(toEmailAddress));
                 message.Subject = "Stowe School Shop Appointment Reminder";
-                message.Body = text ;
+                message.Body = string.Format("Dear {0}, you have booked an appointment for {1}. We hope to see you soon. If you want to modify your appointment please call x", FullName, DateOfAppointment) ;
 
-                client.Send(message);
+                //client.Send(message);
             }
         }
 
