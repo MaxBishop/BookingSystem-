@@ -17,14 +17,14 @@ namespace BookingSystem.DataBase
             var JJ = AddNewStudent("James Java",   "Extra Small");
 
             context.SaveChanges();
-            var Ap1 = AddNewAppointment(new DateTime(2017,05,21), DG);
-            var Ap2 = AddNewAppointment(new DateTime(2017, 05, 21), FF);
-            var Ap3 = AddNewAppointment(new DateTime(2017, 05, 21), JJ);
+            var Ap1 = AddNewAppointment(new DateTime(2017,05,30), DG);
+            var Ap2 = AddNewAppointment(new DateTime(2017, 05, 30), FF);
+            var Ap3 = AddNewAppointment(new DateTime(2017, 05, 30), JJ);
 
             context.SaveChanges();
-            var DB = AddNewParent("Dave Bishop", "davebishop@gmail.com");
-            var BH = AddNewParent("Boris Harding", "boris@hotmail.com");
-            var JW = AddNewParent("John Woods", "Jw@gmail.com");
+            var DB = AddNewParent("Dave Bishop", "davebishop@gmail.com", 70480789789);
+            var BH = AddNewParent("Boris Harding", "boris@hotmail.com", 70480789789);
+            var JW = AddNewParent("John Woods", "Jw@gmail.com", 70480789789);
 
         }
 
@@ -41,9 +41,9 @@ namespace BookingSystem.DataBase
             Context.Appointments.Add(App);
             return (App);
         }
-        private Parent AddNewParent(string name, string email)
+        private Parent AddNewParent(string name, string email, long mobile)
         {
-            var Prnt = new Parent() { FullName = name, Email = email};
+            var Prnt = new Parent() { FullName = name, Email = email, Mobile = mobile};
             Context.Parents.Add(Prnt);
             return (Prnt);
         }

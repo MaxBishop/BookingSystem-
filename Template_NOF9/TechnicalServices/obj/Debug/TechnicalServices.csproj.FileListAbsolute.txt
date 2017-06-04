@@ -1,0 +1,5 @@
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\TechnicalServices.dll
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\TechnicalServices.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csprojResolveAssemblyReference.cache
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.dll
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.pdb

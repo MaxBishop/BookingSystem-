@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechnicalServices;
 
+
 namespace BookingSystem.Model
 {
     public class Parent 
@@ -24,10 +25,15 @@ namespace BookingSystem.Model
         [RegEx(Validation = @"^[\-\w\.]+@[\-\w\.]+\.[A-Za-z]+$")] // THis validates the email to check its in the correct format- go to manual under "email"
         public virtual string Email { get; set; }
 
+        public virtual long Mobile { get; set; }
+
        
-        public void emailallert(string text)
-        {
+     public void emailallert()
+       {
+            string parent = FullName;
+           // DateTime now = DateofAppointment;
+            string text = "Dear {parent}, / You have booked an appointment for the ";
             EmailSender.SendTextEmail(Email, text);
-        }
+       }
     }
 }
