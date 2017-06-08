@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace BookingSystem.Model
 {
-    class Enums
-    {
-       // public enum Form
-       // {
-         //   3rdForm, 4thForm, 5thForm, Lower6th, Upper6th
-        //}
-        //public enum TimeSlots
-        //{
-          //  9am, 11am, 1pm
-        //}
+   
+        public enum Form
+       {
+          _3rdForm, _4thForm, _5thForm, Lower6th, Upper6th
+        }
+        public enum TimeSlots
+        {
+            _9am, _11am, _1pm
+        }
 
-    }
+    
 }

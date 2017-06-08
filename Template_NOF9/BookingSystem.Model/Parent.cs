@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TechnicalServices;
 
 
+
 namespace BookingSystem.Model
 {
     public class Parent 
@@ -30,10 +31,15 @@ namespace BookingSystem.Model
        
      public void emailallert()
        {
-            string parent = FullName;
-           // DateTime now = DateofAppointment;
-            string text = "Dear {parent}, / You have booked an appointment for the ";
-            EmailSender.SendTextEmail(Email, text);
-       }
+           // if (DateTime.Now.Hour == 12)
+           // {
+                string parent = FullName;
+                // DateTime now = DateofAppointment;
+
+                EmailSender.SendTextEmail(Email, parent);
+          //  }
+
+        }
+         
     }
 }

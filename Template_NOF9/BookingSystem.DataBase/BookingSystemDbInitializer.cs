@@ -31,7 +31,7 @@ namespace BookingSystem.DataBase
 
         private Pupil AddNewStudent(string name,  string ClothingSize)
         {
-            var ppl = new Pupil() { FullName = name,  size = ClothingSize };
+            var ppl = new Pupil() { FullName = name,  size = ClothingSize};
             Context.Pupils.Add(ppl);
             return (ppl);
         }

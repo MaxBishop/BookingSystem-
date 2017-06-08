@@ -46,5 +46,12 @@ namespace BookingSystem.Model
 
      
         public virtual DateTime DateofAppointment { get; set; }
+
+
+        public virtual TimeSlots Timeslot { get; set; }
+
+
+
+
     }
 }
