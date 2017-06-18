@@ -12,11 +12,7 @@ namespace BookingSystem.Model
 {
     public class Parent 
     {
-        #region Injected Services
 
-        public IEmailSender EmailSender { set; protected get; }
-
-        #endregion
         [NakedObjectsIgnore]//Indicates that this property will never be seen in the UI
         public virtual int Id { get; set; }
 
@@ -29,17 +25,7 @@ namespace BookingSystem.Model
         public virtual long Mobile { get; set; }
 
        
-     public void emailallert()
-       {
-           // if (DateTime.Now.Hour == 12)
-           // {
-                string parent = FullName;
-                // DateTime now = DateofAppointment;
 
-                EmailSender.SendTextEmail(Email, parent);
-          //  }
-
-        }
          
     }
 }

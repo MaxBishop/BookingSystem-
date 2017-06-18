@@ -22,7 +22,7 @@ namespace BookingSystem.Model
 
         public virtual float price { get; set; }
 
-        [Hidden(WhenTo.UntilPersisted)]
+      //  [Hidden(WhenTo.UntilPersisted)]
         public virtual Image Photo
         {
             get

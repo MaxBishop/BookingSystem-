@@ -6,7 +6,8 @@
   "appPath": "http://localhost:5000/rest",
   "colors": {
     "typeMap": {
-      "Template.Model.Student": 1
+      "BookingSystem.Model.Parent": 1, 
+      "BookingSystem.Model.Pupil": 2
     }
   },
   "masks": {

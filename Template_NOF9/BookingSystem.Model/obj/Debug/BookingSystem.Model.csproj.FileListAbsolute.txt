@@ -10,3 +10,9 @@ C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\b
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\obj\Debug\BookingSystem.Model.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\obj\Debug\BookingSystem.Model.dll
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\obj\Debug\BookingSystem.Model.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\Common.Logging.Core.dll
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\Common.Logging.dll
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\Common.Logging.Core.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\Common.Logging.Core.xml
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\Common.Logging.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\BookingSystem.Model\bin\Debug\Common.Logging.xml

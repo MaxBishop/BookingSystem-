@@ -8,6 +8,6 @@ namespace TechnicalServices
 {
     public interface IEmailSender
     {
-        void SendTextEmail(string toEmailAddress, string text);
+        void SendTextEmail( string text);
     }
 }

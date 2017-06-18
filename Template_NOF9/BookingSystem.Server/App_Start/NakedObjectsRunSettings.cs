@@ -51,7 +51,8 @@ namespace NakedObjects.BookingSystem {
                     typeof(PupilRepository),
                     typeof(AppointmentRepository),
                     typeof(ParentRepostiory),
-                    typeof(SMTPMailServer),
+                    //typeof(SMTPMailServer),
+                    typeof(MockEmailsender),
                     typeof(OrderRepository),
                     typeof(Product_Repostitory)
 

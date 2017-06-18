@@ -38,6 +38,9 @@ namespace BookingSystem.Model
 
         public virtual Pupil Pupil { get; set; }
 
+        [MultiLine(NumberOfLines = 10), Optionally]
+        public virtual string Notes { get; set; }
+
         [PageSize(10)]
         public IQueryable<Pupil> AutoCompletePupil([MinLength(3)] string name)
         {

@@ -1,0 +1,8 @@
+WARN 8 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
+WARN 8 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
+ERROR 7 NakedObjects.Core.Util.InvokeUtils - Mapping and metadata information could not be found for EntityType 'BookingSystem.Model.Product'.
+ERROR 7 NakedObjects.Core.Util.InvokeUtils - Mapping and metadata information could not be found for EntityType 'BookingSystem.Model.Product'.
+WARN 7 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
+WARN 7 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
+WARN 10 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element
+WARN 10 NakedObjects.Persistor.Entity.Component.EntityObjectStore - Ignoring exception Sequence contains no matching element

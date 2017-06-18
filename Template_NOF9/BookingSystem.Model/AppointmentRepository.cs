@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechnicalServices;
 
 namespace BookingSystem.Model
 {
@@ -16,8 +17,11 @@ namespace BookingSystem.Model
             #region Injected Services
             //An implementation of this interface is injected automatically by the framework
             public IDomainObjectContainer Container { set; protected get; }
-            #endregion
-            public Appointment CreateNewAppointment()
+            public IEmailSender EmailSender { set; protected get; }
+            public Parent Parent { set; protected get; }
+        #endregion
+
+        public Appointment CreateNewAppointment()
             {
                 //'Transient' means 'unsaved' -  returned to the user
                 //for fields to be filled-in and the object saved.
@@ -31,21 +35,38 @@ namespace BookingSystem.Model
                 return Container.Instances<Appointment>();
             }
 
-           public IQueryable<Pupil> FindPupilByName(string name)
-            {
+          // public IQueryable<Pupil> FindPupilByName(string name)
+            //{
                 //Filters students to find a match
-                return null; //AllAppointments().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
-            }
+               //// return null; //AllAppointments().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
+         //  }
+        public void SendEmailsToTomorrowsAppointments() //to do
+        {
+            var tomorrow = DateTime.Today.AddDays(1);
+            var appointments = AppointmentsFor(tomorrow);
+            foreach (var appt in appointments)
+            {
+                string Text = string.Format("Dear {0}, you have booked an appointment for {1}. We hope to see you soon. If you want to modify your appointment please call x",Parent.FullName, Parent.Email);
+                EmailSender.SendTextEmail(Text);
+            }          
+                           
+        }
 
         [Eagerly(EagerlyAttribute.Do.Rendering)]
         public IQueryable<Appointment> TodaysAppointments()
         {
-            return AllAppointments().Where(C => C.DateofAppointment == (DateTime.Today));
+            return AppointmentsFor(DateTime.Today);
         }
-        
+
+        private IQueryable<Appointment> AppointmentsFor(DateTime d)
+        {
+            return AllAppointments().Where(C => C.DateofAppointment == d);
         }
-   
+
+
     }
+
+}
 
 
 
