@@ -1,4 +1,0 @@
-ERROR 12 NakedObjects.Rest.Model.AbstractModelBinder - Parsing of request arguments failed: Maximum request length exceeded.
-ERROR 5 NakedObjects.Rest.Model.AbstractModelBinder - Parsing of request arguments failed: Maximum request length exceeded.
-ERROR 12 NakedObjects.Rest.Model.AbstractModelBinder - Parsing of request arguments failed: Maximum request length exceeded.
-ERROR 10 NakedObjects.Rest.Model.AbstractModelBinder - Parsing of request arguments failed: Maximum request length exceeded.
