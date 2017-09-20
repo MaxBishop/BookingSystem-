@@ -11,7 +11,7 @@ namespace BookingSystem.Model
     public class Product
     {
         [NakedObjectsIgnore]//Indicates that this property will never be seen in the UI
-        public virtual int Id { get; set; }
+        public virtual int ProductID { get; set; }
 
         [Title]//This property will be used for the object's title at the top of the view and in a link
         public virtual string ProductName { get; set; }
@@ -20,7 +20,7 @@ namespace BookingSystem.Model
 
         //public Enum size { get; set; }
 
-        public virtual float price { get; set; }
+        public virtual decimal price { get; set; }
 
       //  [Hidden(WhenTo.UntilPersisted)]
         public virtual Image Photo

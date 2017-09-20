@@ -15,7 +15,10 @@ namespace BookingSystem.Model
         {
             _9am, _11am, _1pm
         }
-
+        public enum Status
+    {
+        Pending, Recieved , Shipping, Arrived
+    }
 
 
 

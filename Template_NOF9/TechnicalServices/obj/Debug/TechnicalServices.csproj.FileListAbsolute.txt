@@ -8,3 +8,4 @@ C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.xml
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.pdb
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.xml
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csprojResolveAssemblyReference.cache
