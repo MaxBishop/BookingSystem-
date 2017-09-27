@@ -20,6 +20,13 @@ namespace BookingSystem.Model
         Pending, Recieved , Shipping, Arrived
     }
 
+    public enum Sex
+    {
+        Male , Female 
+    }
+   
+    
+
 
 
 }

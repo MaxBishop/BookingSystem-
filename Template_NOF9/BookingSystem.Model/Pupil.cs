@@ -27,6 +27,8 @@ namespace BookingSystem.Model
 
         public virtual Form Form { get; set; }
 
+        public virtual Sex Sex { get; set; }
+
 
 
 

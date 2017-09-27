@@ -19,6 +19,8 @@ namespace BookingSystem.Model
             //'Transient' means 'unsaved' -  returned to the user
             //for fields to be filled-in and the object saved.
             return Container.NewTransientInstance<OrderLine>();
+            
+          
         }
 
        public IQueryable<OrderLine> AllOrderItems()

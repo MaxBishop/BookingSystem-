@@ -1,6 +1,8 @@
 ﻿using NakedObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +29,7 @@ namespace BookingSystem.Model
                 //for fields to be filled-in and the object saved.
                 return Container.NewTransientInstance<Appointment>();
             }
+      
 
             public IQueryable<Appointment> AllAppointments()
             {
@@ -52,12 +55,12 @@ namespace BookingSystem.Model
                            
         }
 
-        [Eagerly(EagerlyAttribute.Do.Rendering)]
+        [Eagerly(EagerlyAttribute.Do.Rendering)][DisplayName("Todays Appointment's") ]
         public IQueryable<Appointment> TodaysAppointments()
         {
             return AppointmentsFor(DateTime.Today);
         }
-
+        [DataType(DataType.DateTime)]
         private IQueryable<Appointment> AppointmentsFor(DateTime d)
         {
             return AllAppointments().Where(C => C.DateofAppointment == d);

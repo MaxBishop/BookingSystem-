@@ -16,11 +16,14 @@ namespace BookingSystem.Model
         [Title]//This property will be used for the object's title at the top of the view and in a link
         public virtual string ProductName { get; set; }
 
+
+
         public virtual string description { get; set; }
 
         //public Enum size { get; set; }
 
         public virtual decimal price { get; set; }
+
 
       //  [Hidden(WhenTo.UntilPersisted)]
         public virtual Image Photo

@@ -55,7 +55,8 @@ namespace NakedObjects.BookingSystem {
                     typeof(MockEmailsender),
                     typeof(OrderRepository),
                     typeof(Product_Repostitory),
-                    typeof(OrderLineRepository)
+                    typeof(RecomendedItemsRepository)
+                    //typeof(OrderLineRepository)
 
                 };
             }
@@ -82,7 +83,9 @@ namespace NakedObjects.BookingSystem {
                 factory.NewMenu<ParentRepostiory>(true, "Parent"),
                 factory.NewMenu<OrderRepository>(true, "Order"),
                 factory.NewMenu<Product_Repostitory>(true, "Products"),
-                factory.NewMenu<OrderLineRepository>(true, "OrderLine")
+                factory.NewMenu<RecomendedItemsRepository>(true, "Recomended Items")
+
+                //factory.NewMenu<OrderLineRepository>(true, "OrderLine")
 
 
             };

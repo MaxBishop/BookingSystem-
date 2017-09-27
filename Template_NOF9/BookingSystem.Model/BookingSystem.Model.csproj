@@ -71,6 +71,8 @@
     <Compile Include="PupilRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pupil.cs" />
+    <Compile Include="Recomended Items.cs" />
+    <Compile Include="RecomendedItemsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
