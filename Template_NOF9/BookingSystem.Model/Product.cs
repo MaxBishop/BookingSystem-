@@ -16,7 +16,9 @@ namespace BookingSystem.Model
         [Title]//This property will be used for the object's title at the top of the view and in a link
         public virtual string ProductName { get; set; }
 
+        public virtual  Form Form { get;  set; }
 
+        public virtual Sex Sex { get; set; }
 
         public virtual string description { get; set; }
 

@@ -9,8 +9,8 @@ namespace BookingSystem.Model
    
         public enum Form
        {
-          _3rdForm, _4thForm, _5thForm, Lower6th, Upper6th
-        }
+          _3rdForm, _4thForm, _5thForm, _6thForm
+    }
         public enum TimeSlots
         {
             _9am, _11am, _1pm
@@ -22,7 +22,7 @@ namespace BookingSystem.Model
 
     public enum Sex
     {
-        Male , Female 
+        Male , Female , NotSpecified 
     }
    
     

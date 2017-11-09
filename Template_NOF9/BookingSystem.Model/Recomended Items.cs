@@ -12,7 +12,8 @@ namespace BookingSystem.Model
         #region injected services
 
         public IDomainObjectContainer Container { set; protected get; }
-
+        
+        
         #endregion
 
         [NakedObjectsIgnore]//Indicates that this property will never be seen in the UI
@@ -37,12 +38,7 @@ namespace BookingSystem.Model
         }
         #endregion
 
-        public RecomendedItems CreateNewItemList()
-        {
-            //'Transient' means 'unsaved' -  returned to the user
-            //for fields to be filled-in and the object saved.
-            return Container.NewTransientInstance<RecomendedItems>();
-        }
+        
 
 
     }

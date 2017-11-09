@@ -12,9 +12,9 @@ namespace BookingSystem.DataBase
         protected override void Seed(BookingSystemDbContext context)
         {
             this.Context = context;
-            var DG = AddNewStudent("Dave Geez",  "Medium", Sex.Female);
-            var FF = AddNewStudent("Forrest Fortran", "Large", Sex.Male);
-            var JJ = AddNewStudent("James Java",   "Extra Small", Sex.Female);
+            var DG = AddNewStudent("Dave Geez",  "Medium", Sex.Female, Form._6thForm);
+            var FF = AddNewStudent("Forrest Fortran", "Large", Sex.Male, Form._3rdForm);
+            var JJ = AddNewStudent("James Java",   "Extra Small", Sex.Female, Form._6thForm);
 
             context.SaveChanges();          
             var Ap1 = AddNewAppointment(DateTime.Today.AddDays(3), FF);
@@ -27,26 +27,27 @@ namespace BookingSystem.DataBase
             var JW = AddNewParent("John Woods", "Jw@gmail.com", 70480789789);
 
             context.SaveChanges();
-            var Blazer = AddNewProduct("Blazer", "Blue", 30.00m);
-            var shorts = AddNewProduct("shorts", "tight", 10.00m);
-            var tshirt = AddNewProduct("tshirt", "sline", 14.99m);
-
-            context.SaveChanges();
-            var hi = AddNewOrderLine(Blazer, 2);
-            var ho = AddNewOrderLine(shorts, 2);
-            var he = AddNewOrderLine(tshirt, 4);
+            var Blazer = AddNewProduct("Blazer", "Blue", 30.00m, Form._6thForm, Sex.NotSpecified);
+            var shorts = AddNewProduct("shorts", "tight", 10.00m, Form._3rdForm, Sex.Male);
+            var tshirt = AddNewProduct("tshirt", "sline", 14.99m, Form._6thForm, Sex.Female);
 
             context.SaveChanges();
             var li = AddNewOrder(Status.Arrived);
             var lo = AddNewOrder(Status.Pending);
             var le = AddNewOrder(Status.Shipping);
 
+            context.SaveChanges();
+            var hi = AddNewOrderLine(Blazer, 2, li);
+            var ho = AddNewOrderLine(shorts, 2, lo);
+            var he = AddNewOrderLine(tshirt, 4, lo);
+
+            
         }
 
 
-        private Pupil AddNewStudent(string name,  string ClothingSize, Sex sex)
+        private Pupil AddNewStudent(string name,  string ClothingSize, Sex sex, Form form)
         {
-            var ppl = new Pupil() { FullName = name,  size = ClothingSize, Sex = sex};
+            var ppl = new Pupil() { FullName = name,  size = ClothingSize, Sex = sex, Form = form};
             Context.Pupils.Add(ppl);
             return (ppl);
         }
@@ -63,15 +64,15 @@ namespace BookingSystem.DataBase
             return (Prnt);
         }
 
-        private Product AddNewProduct(string name, string Description, decimal Price)
+        private Product AddNewProduct(string name, string Description, decimal Price,  Form form, Sex sex)
         {
-            var Prod = new Product() { ProductName = name, description = Description, price = Price };
+            var Prod = new Product() { ProductName = name, description = Description, price = Price, Form = form, Sex = sex  };
             Context.Product.Add(Prod);
             return (Prod);
         }
-        private OrderLine AddNewOrderLine(Product product, int quantity)
+        private OrderLine AddNewOrderLine(Product product, int quantity, Order order)
         {
-            var Ol = new OrderLine() { Product = product, Quantity = quantity };
+            var Ol = new OrderLine() { Product = product, Quantity = quantity , Order = order};
             Context.OrderLine.Add(Ol);
             return (Ol);
 

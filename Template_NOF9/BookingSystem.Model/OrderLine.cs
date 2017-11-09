@@ -24,7 +24,12 @@ namespace BookingSystem.Model
 
         [NakedObjectsIgnore]
         public virtual int ProductID { get; set; }
-  
+
+        [NakedObjectsIgnore]
+        public virtual int OrderID { get; set; }
+        [NakedObjectsIgnore]
+        public virtual Order Order { get; set;  }
+
         public virtual int Quantity { get; set; }
 
      // public void AddToBasket(Product product, int Quantitiy)
