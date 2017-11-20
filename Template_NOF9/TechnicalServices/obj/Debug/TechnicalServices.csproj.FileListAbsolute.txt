@@ -9,3 +9,15 @@ C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.pdb
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.xml
 C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\TechnicalServices.dll
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\TechnicalServices.pdb
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.dll
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.dll
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.pdb
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.xml
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.pdb
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\bin\Debug\Common.Logging.Core.xml
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.dll
+\\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.pdb
