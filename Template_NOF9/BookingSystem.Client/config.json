@@ -1,12 +1,12 @@
 {
-  "authenticate": false,
+  "authenticate": true,
   "authClientId": "5xMMFaiZ8lnBTRZexsDcooZAfbP1IJB8",
   "authDomain": "nakedobjectsdemo.eu.auth0.com",
-  "applicationName" : "Booking System",
-  "appPath": "http://localhost:5000/rest",
+  "applicationName": "Booking System",
+  "appPath": "http://localhost:5000",
   "colors": {
     "typeMap": {
-      "BookingSystem.Model.Parent": 1, 
+      "BookingSystem.Model.Parent": 1,
       "BookingSystem.Model.Pupil": 2
     }
   },
