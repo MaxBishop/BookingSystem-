@@ -21,3 +21,4 @@ C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj
 \\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.dll
 \\Mac\Home\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.pdb
+C:\Users\Max\Documents\GitHub\BookingSystem-\Template_NOF9\TechnicalServices\obj\Debug\TechnicalServices.csproj.CoreCompileInputs.cache

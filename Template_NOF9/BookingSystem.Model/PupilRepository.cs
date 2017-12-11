@@ -12,12 +12,17 @@ namespace BookingSystem.Model
         #region Injected Services
         //An implementation of this interface is injected automatically by the framework
         public IDomainObjectContainer Container { set; protected get; }
+        public ParentRepostiory Parent { set; protected get; }
+
+
         #endregion
         public Pupil CreateNewPupil()
         {
             //'Transient' means 'unsaved' -  returned to the user
             //for fields to be filled-in and the object saved.
-            return Container.NewTransientInstance<Pupil>();
+            var a = Container.NewTransientInstance<Pupil>();
+            a.Parent = Parent.Me();
+            return a;
         }
 
         public IQueryable<Pupil> AllPupils()
@@ -31,6 +36,13 @@ namespace BookingSystem.Model
         {
             //Filters students to find a match
             return AllPupils().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
+        }
+        public IQueryable<Pupil> MyChildren()
+        {
+            var parent = Parent.Me();
+            string Email = parent.Email;
+            return AllPupils().Where(c => c.Parent.Email == Email);
+
         }
     }
 

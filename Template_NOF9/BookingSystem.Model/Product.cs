@@ -55,5 +55,7 @@ namespace BookingSystem.Model
             PhotoName = newImage.Name;
             PhotoMime = newImage.MimeType;
         }
+
+
     }
 }

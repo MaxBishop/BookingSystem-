@@ -59,11 +59,14 @@
   <ItemGroup>
     <Compile Include="AppointmentRepository.cs" />
     <Compile Include="Appointment.cs" />
+    <Compile Include="DefaultAuthorizer.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="OrderLine.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderLineRepository.cs" />
     <Compile Include="OrderRepository.cs" />
+    <Compile Include="Parent Authorizer.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="ParentRepostiory.cs" />
     <Compile Include="Product Repostitory.cs" />

@@ -13,6 +13,7 @@ using NakedObjects.Persistor.Entity.Configuration;
 using BookingSystem.Model;
 using BookingSystem.DataBase;
 using TechnicalServices;
+using NakedObjects.Meta.Authorization;
 
 namespace NakedObjects.BookingSystem {
     public class NakedObjectsRunSettings
@@ -90,5 +91,13 @@ namespace NakedObjects.BookingSystem {
 
             };
         }
+        public static IAuthorizationConfiguration AuthorizationConfig()
+        {
+            var config = new AuthorizationConfiguration<DefaultAuthorizer>();
+            //config.AddNamespaceAuthorizer<BookingSystemAuthorizer>("Booking System");
+            //config.AddNamespaceAuthorizer<Cluster1Authorizer>("MyApp.MyCluster1");
+            return config;
+        }
+        
     }
 }

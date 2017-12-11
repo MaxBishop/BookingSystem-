@@ -11,20 +11,23 @@ namespace BookingSystem.DataBase
         private BookingSystemDbContext Context;
         protected override void Seed(BookingSystemDbContext context)
         {
+
+
             this.Context = context;
-            var DG = AddNewStudent("Dave Geez",  "Medium", Sex.Female, Form._6thForm);
-            var FF = AddNewStudent("Forrest Fortran", "Large", Sex.Male, Form._3rdForm);
-            var JJ = AddNewStudent("James Java",   "Extra Small", Sex.Female, Form._6thForm);
-
-            context.SaveChanges();          
-            var Ap1 = AddNewAppointment(DateTime.Today.AddDays(3), FF);
-            var Ap2 = AddNewAppointment(DateTime.Today.AddDays(3), FF);
-            var Ap3 = AddNewAppointment(DateTime.Today.AddDays(3), JJ);
-
-            context.SaveChanges();
+            var Me = AddNewParent("Max Doy", "maxbishop3@gmail.com", 07470473876);
             var DB = AddNewParent("Dave Bishop", "davebishop@gmail.com", 70480789789);
             var BH = AddNewParent("Boris Harding", "boris@hotmail.com", 70480789789);
             var JW = AddNewParent("John Woods", "Jw@gmail.com", 70480789789);
+
+            context.SaveChanges();
+            var DG = AddNewStudent("Dave Geez", "Medium", Sex.Female, Form._6thForm, Me);
+            var FF = AddNewStudent("Forrest Fortran", "Large", Sex.Male, Form._3rdForm, Me);
+            var JJ = AddNewStudent("James Java", "Extra Small", Sex.Female, Form._6thForm, Me);
+
+            context.SaveChanges();
+            var Ap1 = AddNewAppointment(DateTime.Today.AddDays(3), FF);
+            var Ap2 = AddNewAppointment(DateTime.Today.AddDays(3), FF);
+            var Ap3 = AddNewAppointment(DateTime.Today.AddDays(3), JJ);
 
             context.SaveChanges();
             var Blazer = AddNewProduct("Blazer", "Blue", 30.00m, Form._6thForm, Sex.NotSpecified);
@@ -44,10 +47,16 @@ namespace BookingSystem.DataBase
             
         }
 
-
-        private Pupil AddNewStudent(string name,  string ClothingSize, Sex sex, Form form)
+        private Parent AddNewParent(string name, string email, long mobile)
         {
-            var ppl = new Pupil() { FullName = name,  size = ClothingSize, Sex = sex, Form = form};
+            var Prnt = new Parent() { FullName = name, Email = email, Mobile = mobile };
+             Context.Parents.Add(Prnt);
+            return (Prnt);
+        }
+
+        private Pupil AddNewStudent(string name,  string ClothingSize, Sex sex, Form form, Parent parent)
+        {
+            var ppl = new Pupil() { FullName = name,  size = ClothingSize, Sex = sex, Form = form, Parent = parent};
             Context.Pupils.Add(ppl);
             return (ppl);
         }
@@ -57,12 +66,7 @@ namespace BookingSystem.DataBase
             Context.Appointments.Add(App);
             return (App);
         }
-        private Parent AddNewParent(string name, string email, long mobile)
-        {
-            var Prnt = new Parent() { FullName = name, Email = email, Mobile = mobile};
-            Context.Parents.Add(Prnt);
-            return (Prnt);
-        }
+        
 
         private Product AddNewProduct(string name, string Description, decimal Price,  Form form, Sex sex)
         {

@@ -29,6 +29,11 @@ namespace BookingSystem.Model
 
         public virtual Sex Sex { get; set; }
 
+        [Disabled]
+        public virtual Parent Parent { get; set; }
+
+
+
 
 
 

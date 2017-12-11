@@ -22,14 +22,18 @@ namespace BookingSystem.Model
             //The 'Container' masks all the complexities of 
             //dealing with the database directly.
             return Container.Instances<RecomendedItems>();
+
+
         }
 
-            public List<Product> RecomendedItemsList(Pupil Pupil)
+            public List<Product> RecomendedItemsList()
             {
             //'Transient' means 'unsaved' -  returned to the user
             //for fields to be filled-in and the object saved.
 
             //var pup = PupilRepository.AllPupils().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
+
+            var Pupil = PupilRepository.MyChildren().FirstOrDefault();
 
             var Items = Product_Repository.AllProducts();
 
