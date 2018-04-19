@@ -19,9 +19,10 @@ namespace BookingSystem.Model
         [Title]//This property will be used for the object's title at the top of the view and in a link
         public virtual string FullName { get; set; }
 
-        [Disabled] // THis validates the email to check its in the correct format- go to manual under "email"
+        [Disabled] [RegEx(Validation = @"^[\-\w\.]+@[\-\w\.]+\.[A-Za-z]+$")]// THis validates the email to check its in the correct format- go to manual under "email"
         public virtual string Email { get; set; }
 
+        [RegEx(Validation = @"^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$")]
         public virtual long Mobile { get; set; }
 
 

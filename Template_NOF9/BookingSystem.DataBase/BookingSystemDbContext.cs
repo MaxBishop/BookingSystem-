@@ -22,6 +22,10 @@ namespace BookingSystem.DataBase
         public DbSet<OrderLine> OrderLine { get; set; }
 
         public DbSet<Order> Order { get; set; }
+
+        public DbSet<Manager> Manager { get; set; }
+
+        public DbSet<Information> Information { get; set; }
     }
 
 }

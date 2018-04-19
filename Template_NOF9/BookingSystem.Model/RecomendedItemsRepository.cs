@@ -17,27 +17,21 @@ namespace BookingSystem.Model
         public PupilRepository PupilRepository { set; protected get; }
         #endregion
 
-        public IQueryable<RecomendedItems> AllRecomendedItems()
+
+
+        public List<Product> RecomendedItemsList()
         {
-            //The 'Container' masks all the complexities of 
-            //dealing with the database directly.
-            return Container.Instances<RecomendedItems>();
-
-
-        }
-
-            public List<Product> RecomendedItemsList()
-            {
             //'Transient' means 'unsaved' -  returned to the user
             //for fields to be filled-in and the object saved.
 
             //var pup = PupilRepository.AllPupils().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
-
-            var Pupil = PupilRepository.MyChildren().FirstOrDefault();
-
+            
+            
+            
             var Items = Product_Repository.AllProducts();
-
-                if (Pupil.Sex == Sex.Male)
+            var Pupil = PupilRepository.MyChildren().FirstOrDefault();
+           
+            if (Pupil.Sex == Sex.Male)
                 {
                     Items = Items.Where(i => i.Sex == Sex.Male);
                     if (Pupil.Form == Form._3rdForm)
@@ -74,9 +68,9 @@ namespace BookingSystem.Model
                     }
                 }
 
-                return null;
-
+            return null;        
             }
+        
         }
 
 

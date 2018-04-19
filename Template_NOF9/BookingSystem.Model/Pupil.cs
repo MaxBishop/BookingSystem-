@@ -21,8 +21,9 @@ namespace BookingSystem.Model
 
         [Title]//This property will be used for the object's title at the top of the view and in a link
         public virtual string FullName { get; set; }
+        
 
-        public virtual string size { get; set; }
+        public virtual Size size { get; set; }
 
 
         public virtual Form Form { get; set; }

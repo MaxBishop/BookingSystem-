@@ -19,9 +19,7 @@ namespace BookingSystem.Model
         [Title]
         public virtual Product Product { get; set; }
 
-       
-
-
+      
         [NakedObjectsIgnore]
         public virtual int ProductID { get; set; }
 
@@ -32,14 +30,15 @@ namespace BookingSystem.Model
 
         public virtual int Quantity { get; set; }
 
-     // public void AddToBasket(Product product, int Quantitiy)
-     // {
-      //      var NewItem = new OrderLine();
-            
-      // }
+        public string ValidateQuantity(int quantity)
+        {
+            var rb = new ReasonBuilder();
+            rb.AppendOnCondition(quantity > 15, "Enter a smaller quantity");
+            return rb.Reason;
+        }
 
 
-       public int DefaultQuantity()
+        public int DefaultQuantity()
         {
             return 1;
        }

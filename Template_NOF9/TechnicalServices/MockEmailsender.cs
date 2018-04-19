@@ -12,7 +12,7 @@ namespace TechnicalServices
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(MockEmailsender));
 
-        public void SendTextEmail(string text)
+        public void SendTextEmail(string text, string email)
         {
             Log.Warn("email sent");
         }

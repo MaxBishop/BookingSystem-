@@ -30,16 +30,6 @@ namespace BookingSystem.Model
             return Container.Instances<OrderLine>();
        }
 
-    //    public IQueryable<OrderLine> FindOrderByName(string name)
-      //  {
-            //Filters students to find a match
-          //  return null;// AllOrders().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
-       // }
-
-        //  [Eagerly(EagerlyAttribute.Do.Rendering)]
-        //  public IQueryable<Appointment> TodaysAppointments()
-        //{
-        //  return AllAppointments().Where(C => C.DateofAppointment == (DateTime.Today));
-        //}
+    
     }
 }

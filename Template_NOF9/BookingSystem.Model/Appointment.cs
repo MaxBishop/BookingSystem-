@@ -1,5 +1,7 @@
-﻿using NakedObjects;
+﻿
+using NakedObjects;
 using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
@@ -41,20 +43,30 @@ namespace BookingSystem.Model
         [MultiLine(NumberOfLines = 10), Optionally]
         public virtual string Notes { get; set; }
 
+        public virtual TimeSlots Timeslot { get; set; }
+
         [PageSize(10)]
         public IQueryable<Pupil> AutoCompletePupil([MinLength(3)] string name)
         {
             return BookingSystemService.FindPupilByName(name);
         }
 
-     
+        
         public virtual DateTime DateofAppointment { get; set; }
+        public AppointmentRepository appointmentrepository { set; protected get; }
+        
+        
+ 
+
+        public DateTime DefaultDateofAppointment()
+        {
+            return DateTime.Today;
+        }
+
+   
 
 
-        public virtual TimeSlots Timeslot { get; set; }
-
-
-
+        
 
     }
 }

@@ -39,12 +39,7 @@ namespace BookingSystem.Model
             }
         }
 
-      //  public Product_Repostitory Product_Repostiory { set; protected get; }
-      //  [PageSize(10)]
-      //  public IQueryable<Product> AutoCompleteProduct([MinLength(3)] string name)
-       // {
-      //      return Product_Repostiory.FindProductByName(name);
-      //  }
+       
 
         public void AddOrderLine(Product Product, int Quantity)
         {

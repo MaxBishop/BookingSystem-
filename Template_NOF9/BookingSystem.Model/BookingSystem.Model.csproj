@@ -59,14 +59,16 @@
   <ItemGroup>
     <Compile Include="AppointmentRepository.cs" />
     <Compile Include="Appointment.cs" />
-    <Compile Include="DefaultAuthorizer.cs" />
+    <Compile Include="Authorizer.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Information Repository.cs" />
+    <Compile Include="Information.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="ManagerRepository.cs" />
     <Compile Include="OrderLine.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderLineRepository.cs" />
     <Compile Include="OrderRepository.cs" />
-    <Compile Include="Parent Authorizer.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="ParentRepostiory.cs" />
     <Compile Include="Product Repostitory.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="Pupil.cs" />
     <Compile Include="Recomended Items.cs" />
     <Compile Include="RecomendedItemsRepository.cs" />
+    <Compile Include="Registration Form Repository.cs" />
+    <Compile Include="Registration form.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

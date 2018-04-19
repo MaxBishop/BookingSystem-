@@ -12,20 +12,20 @@ namespace TechnicalServices
         public class SMTPMailServer :  IEmailSender
         {
             private static string SMTP_HOST_NAME = "Smtp.gmail.com";
-            private static string SMTP_USER = "@gmail.com";
+            private static string SMTP_USER = "ManagerStowe@gmail.com";
 
-            public void SendTextEmail(string Text) 
+            public void SendTextEmail(string Text, string Email) 
         {
               
                 SmtpClient client = new SmtpClient();
                 client.Host = SMTP_HOST_NAME;
                 client.EnableSsl = true;
-                client.Credentials = new NetworkCredential("@gmail.com", "password"); //to do
+                client.Credentials = new NetworkCredential("ManagerStowe@gmail.com", "ManagerRepository"); 
 
                 MailMessage message = new MailMessage();
                 message.Sender = new MailAddress(SMTP_USER);
                 message.From = new MailAddress(SMTP_USER);
-                message.To.Add(new MailAddress(Text));
+                message.To.Add(new MailAddress(Email));
                 message.Subject = "Stowe School Shop Appointment Reminder";
                 message.Body= Text;
                 client.Send(message);

@@ -20,14 +20,16 @@ namespace BookingSystem.Model
 
         public virtual Sex Sex { get; set; }
 
+       
         public virtual string description { get; set; }
 
-        //public Enum size { get; set; }
+      
 
         public virtual decimal price { get; set; }
 
 
-      //  [Hidden(WhenTo.UntilPersisted)]
+      
+     
         public virtual Image Photo
         {
             get
@@ -55,6 +57,8 @@ namespace BookingSystem.Model
             PhotoName = newImage.Name;
             PhotoMime = newImage.MimeType;
         }
+
+        
 
 
     }

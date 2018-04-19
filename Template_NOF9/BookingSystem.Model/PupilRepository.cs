@@ -34,16 +34,22 @@ namespace BookingSystem.Model
 
         public IQueryable<Pupil> FindPupilByName(string name)
         {
+
             //Filters students to find a match
             return AllPupils().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
         }
+
+       
         public IQueryable<Pupil> MyChildren()
         {
-            var parent = Parent.Me();
-            string Email = parent.Email;
-            return AllPupils().Where(c => c.Parent.Email == Email);
 
+            
+            var UserName = Container.Principal.Identity.Name;
+            return AllPupils().Where(c => c.Parent.Email.ToUpper().Contains(UserName.ToUpper()));
+            
+                 
         }
+        
     }
 
 }

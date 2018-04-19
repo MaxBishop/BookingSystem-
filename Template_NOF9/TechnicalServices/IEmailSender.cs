@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TechnicalServices
 {
-    public interface IEmailSender
+   public interface IEmailSender
     {
-        void SendTextEmail( string text);
+        void SendTextEmail( string text, string Email);
     }
 }

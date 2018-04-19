@@ -35,24 +35,15 @@ namespace BookingSystem.Model
             //Filters students to find a match
             return AllParents().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
         }
+        [NakedObjectsIgnore]
         public Parent Me()
         {
             var UserName = Container.Principal.Identity.Name;
             return AllParents().Where(c => c.Email.Contains(UserName)).FirstOrDefault();
-            //return AllParents().Where(UserName = a.Email;  
-            //Container.InformUser("UserName is " + UserName);
+            
             
         }
-        public bool IsManager()
-        {
-            if (Container.Principal.Identity.Name == "maxbishop@gmail.com")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+     
+
     }
 }

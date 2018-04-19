@@ -19,8 +19,9 @@ namespace BookingSystem.Model
             #region Injected Services
             //An implementation of this interface is injected automatically by the framework
             public IDomainObjectContainer Container { set; protected get; }
-            public IEmailSender EmailSender { set; protected get; }
-            public Parent Parent { set; protected get; }
+          //  public IEmailSender EmailSender { set; protected get; }
+           public SMTPMailServer email { set; protected get; }
+        public Parent Parent { set; protected get; }
         #endregion
 
         public Appointment CreateNewAppointment()
@@ -29,28 +30,32 @@ namespace BookingSystem.Model
                 //for fields to be filled-in and the object saved.
                 return Container.NewTransientInstance<Appointment>();
             }
-      
+        public Appointment MyAppointment()
+        {
+            var UserName = Container.Principal.Identity.Name;
+            return AllAppointments().Where(c => c.Pupil.Parent.Email.Contains(UserName)).FirstOrDefault();
+            
 
-            public IQueryable<Appointment> AllAppointments()
+        }
+        
+
+    public IQueryable<Appointment> AllAppointments()
             {
                 //The 'Container' masks all the complexities of 
                 //dealing with the database directly.
                 return Container.Instances<Appointment>();
             }
 
-          // public IQueryable<Pupil> FindPupilByName(string name)
-            //{
-                //Filters students to find a match
-               //// return null; //AllAppointments().Where(c => c.FullName.ToUpper().Contains(name.ToUpper()));
-         //  }
-        public void SendEmailsToTomorrowsAppointments() //to do
+        
+
+        public void SendEmailsToTomorrowsAppointments() 
         {
             var tomorrow = DateTime.Today.AddDays(1);
             var appointments = AppointmentsFor(tomorrow);
             foreach (var appt in appointments)
             {
-                string Text = string.Format("Dear {0}, you have booked an appointment for {1}. We hope to see you soon. If you want to modify your appointment please call x",Parent.FullName, Parent.Email);
-                EmailSender.SendTextEmail(Text);
+                string Text = string.Format("Dear {0}, you have booked an appointment for tomorrow. We hope to see you at the shop. If you want to modify your appointment please call us", appt.Pupil.Parent.FullName); //
+                email.SendTextEmail(Text, appt.Pupil.Parent.Email.ToString());
             }          
                            
         }
@@ -60,11 +65,27 @@ namespace BookingSystem.Model
         {
             return AppointmentsFor(DateTime.Today);
         }
+
+
         [DataType(DataType.DateTime)]
         private IQueryable<Appointment> AppointmentsFor(DateTime d)
         {
             return AllAppointments().Where(C => C.DateofAppointment == d);
         }
+
+        [NakedObjectsIgnore]
+        public bool FindConflictingTimes(DateTime date, TimeSlots timeSlot)
+        {
+            List<Appointment> a = AllAppointments().Where(c => c.DateofAppointment.Equals(date)).ToList();
+            List<Appointment> b = new List<Appointment>();
+            b = (a.Where(c => c.Timeslot.Equals(timeSlot)).ToList());
+            if (b.Count() > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
 
 
     }

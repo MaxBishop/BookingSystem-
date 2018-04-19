@@ -52,13 +52,15 @@ namespace NakedObjects.BookingSystem {
                     typeof(PupilRepository),
                     typeof(AppointmentRepository),
                     typeof(ParentRepostiory),
-                    //typeof(SMTPMailServer),
-                    typeof(MockEmailsender),
+                    typeof(Registration_Form_Repository),
+                   
                     typeof(OrderRepository),
                     typeof(Product_Repostitory),
-                    typeof(RecomendedItemsRepository)
-                    //typeof(OrderLineRepository)
-
+                    typeof(RecomendedItemsRepository),
+                    typeof(ManagerRepository),
+                    typeof(Information_Repository),                                      
+                    typeof(SMTPMailServer),
+                     //typeof(MockEmailsender),
                 };
             }
         }
@@ -84,7 +86,10 @@ namespace NakedObjects.BookingSystem {
                 factory.NewMenu<ParentRepostiory>(true, "Parent"),
                 factory.NewMenu<OrderRepository>(true, "Order"),
                 factory.NewMenu<Product_Repostitory>(true, "Products"),
-                factory.NewMenu<RecomendedItemsRepository>(true, "Recomended Items")
+                factory.NewMenu<RecomendedItemsRepository>(true, "Recomended Items"),
+                factory.NewMenu<Registration_Form_Repository>(true, "Book an Appointment"),
+                factory.NewMenu<ManagerRepository>(true, "Manager"),
+                factory.NewMenu<Information_Repository>(true, "Information")
 
                 //factory.NewMenu<OrderLineRepository>(true, "OrderLine")
 
@@ -93,9 +98,8 @@ namespace NakedObjects.BookingSystem {
         }
         public static IAuthorizationConfiguration AuthorizationConfig()
         {
-            var config = new AuthorizationConfiguration<DefaultAuthorizer>();
-            //config.AddNamespaceAuthorizer<BookingSystemAuthorizer>("Booking System");
-            //config.AddNamespaceAuthorizer<Cluster1Authorizer>("MyApp.MyCluster1");
+            var config = new AuthorizationConfiguration<Authorizer>();
+           
             return config;
         }
         
